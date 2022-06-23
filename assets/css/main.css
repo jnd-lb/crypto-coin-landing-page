@@ -1,0 +1,30 @@
+
+/* Website configuration */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+
+html, body {
+    font-family: 'Raleway', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+/* Variables */
+:root{
+
+    /* Colors */
+    --yellow : #ffcf3c;
+    --violet: #6B00A3;
+    --cyan :  #14E5EF;
+    --gray :  #f5f5f5;
+    --dark-gray :  #898989;;
+
+}
+
+
+
+

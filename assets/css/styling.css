@@ -1,0 +1,312 @@
+
+/* Colors */
+.bg-yellow {
+    background-color: var(--yellow)
+}
+
+.bg-violet {
+    background-color: var(--violet)
+}
+
+.bg-cyan {
+    background-color: var(--cyan)
+}
+
+/* TEXT */
+
+.text-dark-gray {
+    color: var(--dark-gray);
+}
+
+.fs-7{
+    font-size: 0.8rem;
+}
+
+/* size */
+.w-30{
+    width:30%;
+}
+.w-35{
+    width:35%;
+}
+
+.w-fit-content{
+    width: fit-content;   
+}
+
+
+/* Components */
+
+.my-button{
+    background-color:  var(--yellow);
+    border:0px;
+    /*padding:0.5rem 1.8rem;*/
+    border-radius:3rem;
+    transition: all 0.5s ease;
+}
+
+.my-button:hover{
+    opacity:0.9;
+}
+
+
+
+/*NAVBAR*/
+nav a{
+    position: relative;
+    display: block;
+    padding:0.5rem 1.2rem;
+
+    color: white ;
+    font-weight: bold ;
+    text-decoration: none;
+    
+    transition: all 0.5s ease;
+}
+
+
+/* underline */
+nav .nav-item a.active::after{
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color:var(--yellow);
+    left:50%;
+    bottom:0;
+    transform: translateX(-50%);
+}
+
+nav .nav-item a.active{
+    color: white !important;
+}
+
+
+nav .nav-item a:hover{
+    color: var(--yellow);
+}
+
+nav circle{
+    position: absolute;
+    fill: transparent;
+    stroke: var(--yellow);
+    transform-origin: 50% 50%;
+    stroke-width: 4px;
+    stroke-dasharray: 190;
+    stroke-dashoffset: 189;
+    transform: rotate(89deg);
+    stroke-linecap:round;
+    transition:all 0.5s ease, stroke-width 0.9s ease;
+}
+
+nav circle:hover{
+    stroke-width: 2px;
+    stroke-dashoffset: 0;
+}
+
+
+.circle-container{
+    position: relative;
+}
+
+.circle-container svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sign-up{
+    background-color:  var(--yellow);
+    border:0px;
+    padding:0.5rem 1.8rem;
+    border-radius:3rem;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-inline-start: 1rem;
+    transition: all 0.5s ease;
+}
+
+.sign-up:hover{
+    opacity:0.9;
+}
+
+
+/* Animation */
+
+[class*='floating-icon-']{
+    position: absolute;
+}
+
+
+.floating-icon-1{
+    z-index: 2;
+    left: -15px;
+    
+}
+.floating-icon-2{
+    z-index: 1;
+    left: 19px;
+    top: -19px;
+}
+
+.floating-icon-3{
+    z-index: 0;
+    top: -50px;
+}
+
+
+.floating{
+    animation: floating 6s ease-in-out infinite;
+}
+
+.animation-delay-5{
+    animation-delay: 0.5s;
+}
+
+.animation-delay-10{
+    animation-delay: 1s;
+}
+@keyframes floating{
+    0%{
+        transform: translatey(0px);
+    }
+
+    50%{
+        transform: translatey(-20px);
+    }
+
+    100%{
+        transform: translatey(0px);
+    }
+}
+
+/*HERO SECTIONS*/
+
+section.hero{
+    position:relative;
+
+    background-color: var(--violet);
+    background: linear-gradient(90deg, var(--violet) -6%, var(--cyan) 100%);
+    
+    padding-bottom: 9rem;
+
+    
+}
+
+.curverd-bottom{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 175px;
+    
+    transform: translateY(50%);
+    
+    background-color:var(--violet);
+    background: linear-gradient(90deg, var(--violet) -6%, var(--cyan) 100%);
+    
+    border-radius: 100%;
+    
+}
+
+.hero-bottom{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width:100%;
+}
+
+.hero-bottom path{
+    fill: url(#MyGradient);
+    fill: transparent;
+}
+
+.numberbadge{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+
+    background-color: var(--yellow);
+
+    font-weight: bold;
+
+    width: 2.3rem !important;
+    height: 2.3rem !important;
+    padding: 21px;
+
+    border-radius: 100%;
+
+    position: absolute;
+    top: 0.5rem;
+    left: 1.5rem;
+
+
+    transform: translate(-50%, -50%);
+}
+
+
+.cards-container{
+    margin: 0 auto;
+    width: 100%;
+    position: absolute;
+    /* left: 0; */
+    bottom: 0rem;
+    transform: translateY(75%);
+}
+
+
+.card-image-container{
+    display:flex;
+    align-items: center;
+    width: 50%;
+    height:5rem;
+
+    margin-bottom: 1rem;
+}
+
+.card-image-container img{
+   
+}
+
+/* Security Section */
+.security-center{
+    margin-top: 15rem;
+}
+
+
+/* Currency Section */
+
+.currencies-section{
+    background: linear-gradient(90deg, var(--cyan) -20%, var(--violet) 120%);
+}
+
+/* Footer */
+footer{
+    background-color: var(--gray);
+}
+
+
+footer img{
+    transition: all 0.5s ease
+}
+
+footer img:hover{
+    opacity:0.7;
+}
+
+footer ul{
+    list-style: none;
+}
+
+footer ul a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--dark-gray)
+}
+
+footer ul a:hover{
+    color: var(--dark-gray);
+    opacity:0.7;
+}
