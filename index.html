@@ -9,14 +9,19 @@
 
     <!--Jquery-->
     <script src="./libraries/jquery/jquery.min.js"></script>
-
+    
     <!--Bootstrap-->
     <link rel="stylesheet" type="text/css" href="./libraries/bootstrap-5.0.2-dist/bootstrap.min.css"/>
     <script src="./libraries/bootstrap-5.0.2-dist/bootstrap.bundle.min.js"></script>
-
+    
+    <!-- Slick -->
+    <link rel="stylesheet" type="text/css" href="./libraries/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./libraries/slick/slick-theme.css"/>
+    
     <!--Cusom styling-->
     <link rel="stylesheet" href="./assets/css/main.css" type="text/css"/>
     <link rel="stylesheet" href="./assets/css/styling.css" type="text/css"/>
+    <script src="./libraries/slick/slick.min.js"></script>
 
     <!--Custom Script -->
     <script src="./assets/js/main.js"></script>
@@ -26,10 +31,10 @@
 </head>
 
 
-<body class="">
-  <section class="hero">
+<body>
+  <section class="hero hero-gradient">
       <!--NAVIGATION-->
-      <nav class="navbar container navbar-expand-lg bg-transparent py-5">
+      <nav class="navbar container navbar-expand-lg bg-transparent py-4">
           <div class="container-fluid">
             <a class="navbar-brand" href="#">
               <img src="./assets/images/logo.svg" />
@@ -37,28 +42,31 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse  position-relative" id="navbarSupportedContent">
-              <ul class="text-white navbar-nav m-auto mb-2 mb-lg-0 d-flex w-50 justify-content-around">
+            <div class="collapse effect-md-glass navbar-collapse position-relative   flex-lg-row flex-column align-items-center" id="navbarSupportedContent">
+              <ul class="text-white text-center navbar-nav m-auto mt-0 mb-2 mb-lg-0 d-flex w-50 justify-content-around">
                 <li class="nav-item">
                   <a class=" active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
                   <a class="" href="#">Link</a>
                 </li>
-
                 <li class="nav-item">
                   <a class="">Disabled</a>
                 </li>
               </ul>
-          </div>
-          <div class="circle-container d-warning p-4 p-relative">
-              <a class="white">Login</a>
-              <svg>
-                <circle cx="50%" cy="50%" r="30" />
-              </svg>
-          </div>
 
-          <button class="sign-up ms-1 ">Sign up</button>
+              <div class="circle-container p-4 p-relative d-none d-lg-block">
+                  <a class="white">Login</a>
+                  <svg>
+                    <circle cx="50%" cy="50%" r="30" />
+                  </svg>
+              </div>
+              
+              <div class="w-100 w-lg-fit-content d-lg-block d-flex align-items-center flex-column">
+                <button class="my-btn ms-0 ms-md-1 mb-lg-0 mb-2 bg-cyan d-block d-lg-none ">Login</button>
+                <button class="my-btn ms-1 bg-yellow">Sign up</button>
+              </div>
+          </div>
         </nav>
       <!--/END Navbar-->
 
@@ -77,34 +85,67 @@
           <!--Image-->
           <div class="col-md-6 d-flex align-items-center justify-content-center">
             <div class="position-relative">
-              <div class="position-absolute end-50 mt-2">
+              <div class="position-absolute end-lg-50 end-40 mt-lg-2 mt-5">
+                <!--Floating images-->
                   <img class="floating floating-icon-1" src="./assets/images/bitcoin-shadow.svg" />
                   <img class="floating floating-icon-2 animation-delay-5" src="./assets/images/pyramid-coin-shadow.svg" />
                   <img class="floating floating-icon-3 animation-delay-10" src="./assets/images/t-xoin-shadow.svg" />
               </div>
-              <img class="mt-5" src="./assets/images/curve.svg" class="w-100" alt="">
+
+              <!--Background Image-->
+              <img class="mt-5 img-fluid" src="./assets/images/curve.svg" class="w-100" alt="">
             </div>
           </div>
         </div>
         <!-- /Middle text and Image-->
 
-      <!--Curve-->
-      <!--<svg class="hero-bottom" width="500" height="80" viewBox="0 0 500 80" preserveAspectRatio="none">
-        <defs>
-          <linearGradient id="MyGradient">
-            <stop offset="5%" stop-color="#6a54a7" />
-            <stop offset="95%" stop-color="#38e4f0" />
-          </linearGradient>
-        </defs>
 
-        <path d="M0,0 L0,40 Q250,80 500,40 L500,0 Z" />
-      </svg>-->
-
-      <div class="curverd-bottom">
+      <div class="curverd-bottom hero-gradient">
       </div>
+      
 
-        <!--cards-->
-        <div class="row container cards-container">
+        <!--Mobile Version Cards-->
+        <div class=" cards-container-mobile d-lg-none ">
+            <!--Card-->
+            <div class="d-flex align-items justify-content-center">
+              <div class="shadow position-relative bg-white w-75 d-block rounded-5 p-4 py-5">
+                <span class="numberbadge">1</span>
+                <div class="card-image-container" >
+                  <img src="./assets/images/money.svg" alt="" srcset="">
+                </div>
+                <h2 class="fw-bold fs-3">Deposit in your Local currency</h2>
+              </div>
+            </div>
+              
+              <!--Card-->
+              <div class="d-flex align-items justify-content-center">
+                <div class="shadow position-relative bg-white w-75 d-block rounded-5 p-4 py-5">
+                  <span class="numberbadge">2</span>
+                  <div class="card-image-container" >
+                    <img src="./assets/images/shuffle.svg" alt="" srcset="">
+                  </div>
+                  <h2 class="fw-bold fs-3">Buy any coin you want</h2>
+                </div>
+              </div>
+              
+              
+              <!--Card-->
+              <div class="d-flex align-items justify-content-center">
+                <div class="shadow position-relative bg-white w-75 d-block rounded-5 p-4 py-5">
+                  <span class="numberbadge">3</span>
+                  <div class="card-image-container" >
+                    <img src="./assets/images/bitcoin-violet.svg" alt="" srcset="">
+                  </div>
+                  <h2 class="fw-bold fs-3">Manage, sell or simply trade</h2>
+                </div>
+              </div>
+        </div>
+        <!--/Mobile Version Cards-->
+        
+
+
+        <!--Cards Desktop Version-->
+        <div class="row container cards-container d-none d-lg-flex">
 
           <!--Card-->
           <div class="col-md-4 d-flex align-items justify-content-center">
@@ -148,24 +189,24 @@
 
 
 <!--Security Section-->
-  <section class="container security-center py-5 ">
+  <section class="container security-center ">
 
         <div class="row">
 
           <!--Image-->
-          <div class="col-md-6">
+          <div class="col-md-6  py-5">
             <div class="d-flex justify-content-center align-content-center">
               <img src="./assets/images/security.svg" alt="" srcset="">
             </div>
           </div>
 
           <!--Text-->
-          <div class="col-md-6">
+          <div class="col-md-6 py-5">
             <p class="bg-violet p-0 m-0 w-fit-content text-white fs-5">Peace of mind</p>
             <h1 class="display-3 fw-bolder mb-3">Your security is Our priority</h1>
             <p class="fw-light fs-5 mb-4">We operate with three layers of security features, encypted data and authentications using your own biometric data</p>
 
-            <button class="my-button fs-7 fw-bolder py-2 px-3">
+            <button class="animate-button my-btn bg-yellow fs-7 fw-bolder py-2 px-3">
               Learn more
               <img class="ms-2" src="./assets/images/arrow.svg" alt="" srcset="">
             </button>
@@ -186,10 +227,11 @@
           <h1 class=" display-4 text-white  fw-bold">Earn, buy and pay with 20+ different currencies</h1>
         </div>
         <div class="col-md-6 d-flex align-items-center justify-content-center">
-            <img src="./assets/images/bitcoin-shadow.svg" alt="" srcset="">
-            <img src="./assets/images/t-xoin-shadow.svg" alt="" srcset="">
-            <img src="./assets/images/pyramid-coin-shadow.svg" alt="" srcset="">
-            <img src="./assets/images/plus.svg" alt="" srcset="">
+            <img class="w-25" src="./assets/images/bitcoin-shadow.svg" alt="" srcset="">
+            <img class="w-25" src="./assets/images/t-xoin-shadow.svg" alt="" srcset="">
+            <img class="w-25" src="./assets/images/pyramid-coin-shadow.svg" alt="" srcset="">
+            <img class="w-25" src="./assets/images/pyramid-coin-shadow.svg" alt="" srcset="">
+            <img class="" src="./assets/images/plus.svg" alt="" srcset="">
         </div>
       </div>
     </div>
@@ -198,15 +240,20 @@
 
   <!-- Your wallet section -->
   <section>
-    <div class="container py-5">
+    <div class="container">
         <div class="row">
-          <div class="col-md-6 d-flex align-items-center justify-content-center">
-            <div class="w-50">
+          <div class="col-md-6 d-flex align-items-center justify-content-center py-5">
+            <div class="w-50  position-relative d-flex align-items-center justify-content-center">
+              <!--Icons-->
+              <div class="currencies-icons w-100 d-flex align-items-center justify-content-between position-absolute start-0 top-50 translate-middle-y">
+                  <img  src="./assets/images/fingerprint-shining.svg" alt="" srcset="">
+                  <img  src="./assets/images/scan-shining.svg" alt="" srcset="">
+              </div>
               <img  src="./assets/images/Group 48.svg" alt="" srcset="">
             </div>
           </div>
 
-          <div class="col-md-6">
+          <div class="col-md-6 py-5">
             <p class="bg-cyan p-0 m-0 w-fit-content text-white fs-5">Complete control</p>
             <h1 class="display-3 fw-bolder mb-3">Your wallet, your call</h1>
             <p class="fw-light fs-5 mb-4">We like to keep it simple. Your money is
@@ -252,6 +299,7 @@
     </div>
   </footer>
   <!-- END Footer -->
+
 
 </body>
 </html>

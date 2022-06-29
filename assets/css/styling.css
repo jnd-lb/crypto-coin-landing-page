@@ -1,3 +1,17 @@
+/*Position*/
+.start-25{
+    right: 25%;
+}
+.end-40{
+    left: 40%;
+}
+
+@media (min-width:992px){
+    .end-lg-50{
+        left: 50% !important;   
+    }
+}
+
 
 /* Colors */
 .bg-yellow {
@@ -34,19 +48,70 @@
     width: fit-content;   
 }
 
+@media (min-width:992px){
+    .w-lg-fit-content{
+        width: fit-content !important;   
+    }
+}
+
+@media (min-width:768px){
+    .w-md-fit-content{
+        width: fit-content !important;   
+    }
+}
+
+/*-------------------
+| Custom Styling
+---------------------*/
+
+/* Override Slick*/
+.slick-list{
+    overflow: unset;
+    overflow-x: clip;
+    overflow-y: unset;
+}
+
+
 
 /* Components */
 
-.my-button{
-    background-color:  var(--yellow);
+.my-btn{
     border:0px;
     /*padding:0.5rem 1.8rem;*/
     border-radius:3rem;
     transition: all 0.5s ease;
 }
 
-.my-button:hover{
+.my-btn:hover{
     opacity:0.9;
+}
+
+.effect-glass{
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem 0px;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    border-width: 0.1rem;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.28) rgba(255, 255, 255, 0.28) rgba(170, 170, 170, 0.38);
+    border-image: initial;
+    box-shadow: rgb(0 0 0 / 5%) 0px 0.3rem 0.6rem;
+}
+
+
+
+@media (max-width:768px){
+    .effect-md-glass{
+        background: rgba(255, 255, 255, 0.1);
+        padding: 1rem 0px;
+        margin-top: 1rem;
+        border-radius: 1rem;
+        border-width: 0.1rem;
+        border-style: solid;
+        border-color: rgba(255, 255, 255, 0.28) rgba(255, 255, 255, 0.28) rgba(170, 170, 170, 0.38);
+        border-image: initial;
+        box-shadow: rgb(0 0 0 / 5%) 0px 0.3rem 0.6rem;
+    }
 }
 
 
@@ -116,8 +181,7 @@ nav circle:hover{
     transform: translate(-50%, -50%);
 }
 
-.sign-up{
-    background-color:  var(--yellow);
+.my-btn{
     border:0px;
     padding:0.5rem 1.8rem;
     border-radius:3rem;
@@ -127,7 +191,7 @@ nav circle:hover{
     transition: all 0.5s ease;
 }
 
-.sign-up:hover{
+.my-btn:hover{
     opacity:0.9;
 }
 
@@ -182,12 +246,21 @@ nav circle:hover{
 }
 
 /*HERO SECTIONS*/
+.hero-gradient{
+    background: linear-gradient(90deg, var(--violet) -6%, var(--cyan) 100%);
+}
+
+@media (max-width:560px){
+    .hero-gradient{
+        background: linear-gradient(90deg, var(--violet) -65%, var(--cyan) 110%);
+    }
+}
+
 
 section.hero{
     position:relative;
 
     background-color: var(--violet);
-    background: linear-gradient(90deg, var(--violet) -6%, var(--cyan) 100%);
     
     padding-bottom: 9rem;
 
@@ -205,8 +278,6 @@ section.hero{
     transform: translateY(50%);
     
     background-color:var(--violet);
-    background: linear-gradient(90deg, var(--violet) -6%, var(--cyan) 100%);
-    
     border-radius: 100%;
     
 }
@@ -247,6 +318,19 @@ section.hero{
 }
 
 
+
+.cards-container-mobile{
+    position: absolute !important;
+    left: 50%;
+    bottom: 0rem !important;
+    transform: translate(-50%, 55%);
+    width: 100%;
+}
+
+.cards-container .slick-arrow, .cards-container-mobile .slick-prev, .cards-container-mobile .slick-next{
+    display: none !important;
+}
+
 .cards-container{
     margin: 0 auto;
     width: 100%;
@@ -276,10 +360,65 @@ section.hero{
 }
 
 
+.animate-button{
+    transition: all 0.5s ease-out;
+}
+
+.animate-button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 .2rem 0.4rem rgba(0,0,0,.15)!important;
+}
+
+
 /* Currency Section */
 
 .currencies-section{
     background: linear-gradient(90deg, var(--cyan) -20%, var(--violet) 120%);
+}
+
+@media (max-width:560px){
+    .currencies-section{
+        background: linear-gradient(90deg, var(--cyan) -40%, var(--violet) 200%);
+    }
+}
+
+
+
+.currencies-icons {
+    transform-origin: 50% 0%;
+    animation-name: rotatation-animation;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotatation-animation {
+    0%{
+        transform: rotate(0deg) translateY(-50%);
+    }
+
+    100%{
+        transform: rotate(360deg) translateY(-50%);
+    }
+}
+
+.currencies-icons img {
+    animation-name: rotatation-animation-icons;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-direction: reverse;
+}
+
+
+@keyframes rotatation-animation-icons {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
 }
 
 /* Footer */
@@ -310,3 +449,5 @@ footer ul a:hover{
     color: var(--dark-gray);
     opacity:0.7;
 }
+
+
