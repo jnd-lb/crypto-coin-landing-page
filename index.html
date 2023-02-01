@@ -1,3 +1,14 @@
+<!--
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////  
+                   𝙅𝙞𝙝𝙖𝙙 𝙉𝙤𝙪𝙧𝙚𝙙𝙙𝙞𝙣𝙚
+                  Jihad.nd@gmail.com
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crypto Coin</title>
 
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png">
 
     <!--Jquery-->
     <script src="./libraries/jquery/jquery.min.js"></script>
@@ -32,6 +44,7 @@
 
 
 <body>
+
   <section class="hero hero-gradient">
       <!--NAVIGATION-->
       <nav class="navbar container navbar-expand-lg bg-transparent py-4">
@@ -45,18 +58,18 @@
             <div class="collapse effect-md-glass navbar-collapse position-relative   flex-lg-row flex-column align-items-center" id="navbarSupportedContent">
               <ul class="text-white text-center navbar-nav m-auto mt-0 mb-2 mb-lg-0 d-flex w-50 justify-content-around">
                 <li class="nav-item">
-                  <a class=" active" aria-current="page" href="#">Home</a>
+                  <a class="Xactive" aria-current="page" href="#security">Security</a>
                 </li>
                 <li class="nav-item">
-                  <a class="" href="#">Link</a>
+                  <a class="" href="#currencies">Currencies</a>
                 </li>
                 <li class="nav-item">
-                  <a class="">Disabled</a>
+                  <a href="#wallet" class="">Wallet</a>
                 </li>
               </ul>
 
-              <div class="circle-container p-4 p-relative d-none d-lg-block">
-                  <a class="white">Login</a>
+              <div class="cursor-pointer circle-container p-4 p-relative d-none d-lg-block">
+                  <a role="button" class="white ">Login</a>
                   <svg>
                     <circle cx="50%" cy="50%" r="30" />
                   </svg>
@@ -189,7 +202,7 @@
 
 
 <!--Security Section-->
-  <section class="container security-center ">
+  <section id="security" class="container security-center ">
 
         <div class="row">
 
@@ -219,7 +232,7 @@
 
 
   <!-- Currencies Section -->
-  <section class="currencies-section py-4 mt-5">
+  <section id="currencies" class="currencies-section py-4 mt-5">
     <div class="container py-5 d-flex align-items-center justify-content-center">
       <div class="row">
         <div class="col-md-6">
@@ -239,7 +252,7 @@
   <!-- End Currencies Section -->
 
   <!-- Your wallet section -->
-  <section>
+  <section id="wallet">
     <div class="container">
         <div class="row">
           <div class="col-md-6 d-flex align-items-center justify-content-center py-5">
@@ -277,14 +290,18 @@
           <div class="col-md-4">
             <ul class="text-white  m-auto mb-2 mb-lg-0 d-flex  justify-content-around">
               <li class="">
-                <a class=" active" aria-current="page" href="#">Home</a>
+                <a class="" aria-current="page" href="#">Home</a>
               </li>
               <li class="">
-                <a class="" href="#">Link</a>
+                <a class="" aria-current="page" href="#security">Security</a>
               </li>
     
               <li class="">
-                <a class="" href="#">Disabled</a>
+                <a class="" href="#currencies">Currencies</a>
+              </li>
+
+              <li class="">
+                <a class="" href="#wallet">Wallet</a>
               </li>
             </ul>
           </div>
@@ -297,8 +314,17 @@
           </div>
         </div>
     </div>
+    
   </footer>
   <!-- END Footer -->
+  
+      <!--Developed by Jihad-->
+      <div class="bg-dark p-1 d-flex align-items-center justify-content-center">
+        <p class="m-0 p-0 text-white">
+          Developed with 🖤 by <a class="text-white ms-1" href="mailto:jihad.nd@gmail.com">Jihad Noureddine</a>
+        </p>
+      </div>
+      <!--Developed by Jihad-->
 
 
 </body>
